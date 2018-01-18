@@ -1,0 +1,54 @@
+﻿#grid {
+    height:100%;
+    overflow:auto;
+    font-family:"Trebuchet MS";
+}
+.field-eventID {
+    min-width: 45px;
+}
+
+.field-facility {
+    min-width: 45px;
+}
+
+.field-street {
+    min-width: 100px;
+}
+
+.field-status {
+    min-width: 50px;
+}
+
+.field-cityStateZip {
+    min-width: 100px;
+}
+
+.field-date {
+    min-width: 100px;
+}
+
+.field-contact {
+    min-width: 100px;
+}
+
+.field-phone {
+    min-width: 100px;
+}
+
+.field-email {
+    min-width: 150px;
+}
+
+.field-siteName {
+    min-width: 100px;
+}
+
+.dgrid-column {
+    min-width: 100px;
+}
+.dgrid-row {
+    cursor: pointer;
+}
+.dgrid-row-odd {
+    background-color: #acacac;
+}

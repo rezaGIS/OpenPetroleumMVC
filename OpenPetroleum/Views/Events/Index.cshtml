@@ -1,0 +1,100 @@
+﻿@model IEnumerable<OpenPetroleum.Models.OPs_Events>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container-fluid">
+    <h2 class="text-center">Open Petroleum Events</h2>
+    <h4 class="text-center">Manage Events Dashboard</h4>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Facility_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Event_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Site_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City_State_Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_of_Release)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OPS_Contact_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Closure_Date)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Facility_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Site_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City_State_Zip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date_of_Release)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OPS_Contact_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status_Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Closure_Date)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) 
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-info" })
+</div>

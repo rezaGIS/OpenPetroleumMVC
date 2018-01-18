@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- ESRI CSS API 3.18-->
+    @Styles.Render("https://js.arcgis.com/3.18/dijit/themes/claro/claro.css")
+    @Styles.Render("https://js.arcgis.com/3.18/esri/css/esri.css")
+    @Styles.Render("https://js.arcgis.com/3.18/dgrid/css/dgrid.css")
+    @Styles.Render("~/Content/agsjs/css/agsjs.css")
+
+    <script type="text/javascript">
+        // helpful for understanding dojoConfig.packages vs. dojoConfig.paths:
+        // http://www.sitepen.com/blog/2013/06/20/dojo-faq-what-is-the-difference-packages-vs-paths-vs-aliases/
+        var dojoConfig = {
+            paths: {
+                //if you want to host on your own server, download and put in folders then use path like:
+                agsjs: location.pathname.replace(/\/[^/]+$/, '') + 'Content/agsjs'
+            }
+        };
+    </script>
+    @Scripts.Render("https://js.arcgis.com/3.18/")
+
+    <!-- Custom styles for this template -->
+    @Styles.Render("~/Content/index.css")
+    @Styles.Render("~/Content/sidebar.css")
+    @Styles.Render("~/Content/dgrid.css")
+
+    @Scripts.Render("~/Scripts/config.js")
+    @Scripts.Render("~/Scripts/main.js")
+    @Scripts.Render("~/Scripts/findEvents.js")
+    @Scripts.Render("~/Scripts/identifyOps.js")
+
+
+</head>
+<body class="claro">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-oit">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://www.colorado.gov/ops" target="_blank"><img id="cdleLogo" src="~/Content/images/CDLE_Banner_new_whitetext.png" class="img-responsive" /></a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse pull-right">
+                <ul class="nav navbar-nav">
+                    @Html.Partial("_LoginPartial")
+                    <li><a href="https://data.colorado.gov/Environment/Active-OPS-Petroleum-Release-Events-in-Colorado/v5ut-qgp7" target="_blank">Download Data</a></li>
+                    <li><a href="../OpenPetroleum/html/aboutModal.html" data-toggle="modal" data-target="#aboutModal">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-oit body-content">
+        @RenderBody()
+
+    </div>
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

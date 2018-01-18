@@ -1,0 +1,26 @@
+﻿@model OpenPetroleum.Models.IndexViewModel
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Open Petroleum Admin Dashboard";
+}
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div class="container">
+    <h2>@ViewBag.Title</h2>
+    <h4>Welcome @User.Identity.GetUserName()</h4>
+    <hr />
+    <div class="col-lg-3">
+        <h3>Account</h3>
+        <p>@Html.ActionLink("Change my password", "ChangePassword")</p>
+    </div>
+    <div class="col-lg-3">
+        <h3>Application</h3>
+        <p>@Html.ActionLink("View / Remove User", "ChangePassword")</p>
+        <p>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</p>
+    </div>
+    <div class="col-lg-3">
+        <h3>Data</h3>
+        <p>@Html.ActionLink("View Data", "Index", "Events")</p>
+        <p>@Html.ActionLink("Modify Data", "Index", "Edit")</p>
+    </div>
+</div>
+

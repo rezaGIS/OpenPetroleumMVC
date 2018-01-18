@@ -1,0 +1,130 @@
+﻿@model OpenPetroleum.Models.OPs_Events
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OPs_Events</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Facility_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facility_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Event_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Site_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Site_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City_State_Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City_State_Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_of_Release)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_of_Release)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPS_Contact_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPS_Contact_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Closure_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Closure_Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

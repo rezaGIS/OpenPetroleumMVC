@@ -1,0 +1,82 @@
+﻿body, html, .row-offcanvas {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+}
+
+#sidebar {
+    width: inherit;
+    min-width: 300px;
+    max-width: 300px;
+    float: left;
+    height: 73%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 5px;
+    left: 2px;
+}
+
+/*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        width: calc(100% + 300px);
+    }
+
+    .row-offcanvas-left {
+        left: -300px;
+    }
+
+    .off-bottom {
+        position:absolute;
+        bottom: 0;
+        height: 25%;
+        left:300px;
+        width: calc(100% - 300px);
+        
+    }
+
+    .row-offcanvas-left.active {
+        left: auto;
+    }
+
+    .off-bottom.active {
+        left: 0;
+        width:100%
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        
+    }
+}
+
+
+#sideBarBtn {
+    position: absolute;
+    z-index: 1001;
+    background-color: none;
+    border-color: none;
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: block !important;
+        position: absolute;
+    }
+}
+.toolBox {
+    height:auto;
+    float:left;
+
+}

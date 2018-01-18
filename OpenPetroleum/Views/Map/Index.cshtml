@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "Map";
+}
+<div class="container-oit">
+    <div class="row-offcanvas row-offcanvas-left">
+        <div id="sidebar" class="sidebar-offcanvas">
+            <div class="well well-sm">
+                <div id="tocDiv" style="width:50%;"></div>
+            </div>
+            <div class="well well-sm">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <b>Search by Location:</b>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div id="tools" class="toolBox">
+                                    <p id="toolTitle">Search by location:</p>
+                                    <div name="radioButtons" id="radio">
+                                        Geocode address:<input type="radio" name="radioTools" id="useGeocode" checked="checked">
+                                        Map click:
+                                        <input type="radio" name="radioTools" id="useMap">
+                                    </div>
+                                    <div>
+                                        <form>
+                                            <select id="bufferDist" class="form-control col-lg-2">
+                                                <option value=".25">1/4 Mile</option>
+                                                <option value=".5">1/2 Mile</option>
+                                                <option value="1">1 Mile</option>
+                                                <option value="2">2 Miles</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div>
+                                        <div id="search_div">
+                                            <div id="search"></div>
+                                        </div>
+                                        <div id="clickDesc">
+                                            <p><br>Click on map to find surrounding events.</p>
+                                        </div>
+                                    </div>
+                                    <div><button type="button" id="clearBtn" class="btn btn-warning btn-xs">Clear</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <b>Search by Attribute:</b>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div style="display:inline-block;">
+                                            <p>Enter search criteria:</p>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" aria-label="..." id="qryBox">
+                                            <div class="input-group-btn" id="qryDropBtn">
+                                                <select id="qryField" name="qryField" class="form-control">
+                                                    <option value="Event_ID">Event ID</option>
+                                                    <option value="Facility_ID">Facility ID</option>
+                                                    <option value="Site_Name">Name</option>
+                                                    <option value="Status">Status</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="btnGroupQuery">
+                                    <button type="button" class="btn btn-success btn-xs" id="findBtn">Find Matches</button>
+                                    <button type="button" class="btn btn-warning btn-xs" id="clearDgrid">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <p class="visible-xs">
+                <button type="button" id="sideBarBtn" class="btn btn-primary" data-toggle="offcanvas"><i class="glyphicon glyphicon-wrench"></i></button>
+            </p>
+            <div id="mapDiv"><div id="basemapToggle"></div></div>
+        </div>
+        <div id="bottomPanel" class="off-bottom"><div id="grid"></div></div>
+    </div>
+
+</div>
+
+
