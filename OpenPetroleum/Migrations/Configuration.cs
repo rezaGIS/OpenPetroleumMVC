@@ -29,7 +29,7 @@ namespace OpenPetroleum.Migrations
                     SecurityStamp = Guid.NewGuid().ToString()
                 });
             var passwordHashOIT = new PasswordHasher();
-            string passwordOIT = passwordHashOIT.HashPassword("Highboost1!");
+            string passwordOIT = passwordHashOIT.HashPassword("CDLE0ps!");
             context.Users.AddOrUpdate(u => u.UserName,
                 new ApplicationUser
                 {
